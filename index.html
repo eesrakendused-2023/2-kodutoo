@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js" integrity="sha512-GS3CSFQ4aj+0fL2a0wV1ouvpdbTZ3eEUriXTpXt50dc0CkO1fgyWuLoPA5NWy1PAWmcaZNneM+OAThgCqPnX+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.css" integrity="sha512-z04xx19bk6Q/FewwTQYDcyJsZKDglEvuszVGtMUOeaPwTl6p9oa914VzJRBDT/HLCYzG+GQ03xfOa9jCzcNLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="./highlight/styles/default.min.css">
+    <script src="./highlight/highlight.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="fullpage">
+
+        <div class="section">
+            <H1>Teine kodune töö</H1>
+            <p>Hendrik Karilaid</p>
+            <a href="https://github.com/hkarilaid/2-kodutoo-1">Repo</a>
+            <ul id="myMenu">
+                <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Pealeht</a></li>
+                <li data-menuanchor="secondPage"><a href="#secondPage">Oskused</a></li>
+                <li data-menuanchor="thirdPage"><a href="#thirdPage">Kontaktandmed</a></li>
+                <li data-menuanchor="fourthPage"><a href="#fourthPage">Tehtud tööd</a></li>
+                <li data-menuanchor="fifthPage"><a href="#fifthPage">Hobid</a></li>
+                <li data-menuanchor="sixthPage"><a href="#sixthPage">Youtube</a></li>
+                <li data-menuanchor="seventhPage"><a href="#seventhPage">Mäng</a></li>
+            </ul>
+
+        </div>
+        <div class="section">
+            <div class="slide" data-anchor="slide2">
+              <h1>Oskused</h1>
+              
+
+              
+            </div>
+              <div class="slide" data-anchor="slide2">
+                
+                <div class="Oskused">
+
+                <div class="Pilt">
+                <img src="./pildid/vmware-removebg-preview.png" alt="VmWare">
+                </div>
+                <div class="tekstid">
+                    <p>VMware vSphere</p>
+                    </div>
+                </div>
+              </div>
+              <div class="slide" data-anchor="slide3">
+                
+                <div class="vmware">
+
+                <div class="pilt">
+                <img src="./pildid/veeam-removebg-preview.png" alt="Veeam">
+                </div>
+                <div class="tekstid">
+                    <p>Veeam Backup and Replication</p>
+                    </div>
+                </div>
+              </div>
+      
+        </div>
+        <div class="section"> 
+            <h1>Kontaktandmed</h1>
+            <p>Tel: +372 555 12345</p>
+            <p>Email: e@mail.ee</p>
+            <div id="map"></div>
+            
+        
+        
+        </div>
+        <div class="section">
+            <h1>Tehtud tööd</h1>
+            <p>Paar lihtsat PowerCLI scripti</p>
+            <div class="flex-code">
+            <div>
+            <pre><code class="language-powershell">
+#Script annab vcentris olevate hostide arvu versiooni kaupa
+
+$v7 = Get-VMHost | where Version -like "7.0.*" | measure
+$v6 = Get-VMHost | where Version -like "6.*" | measure
+
+Write-Output "Versioon 7.x hoste on: $($v7.count)"
+Write-Output "Versioon 6.x hoste on: $($v6.count)"
+            </code></pre>
+            </div>
+            <div>
+            <pre><code class="language-powershell">
+#Script annab Datacentrid kuhu on võimalik panna ROBO litsents
+
+$Datacenters = Get-Datacenter
+$Total = 0
+Foreach ($Datacenter in $Datacenters){
+    $VMs = Get-Datacenter $Datacenter | Get-VM | Measure | Select-Object -ExpandProperty Count
+    if ($VMs -le 25){
+        Write-host "$Datacenter sobib ROBO litsents, sest seal on $VMs virtukat" -BackgroundColor Green -ForegroundColor Black
+        $Total = $Total + $VMs
+    } else {
+        Write-host "$Datacenter on virtukaid $VMs"
+    }
+    
+}
+
+Write-Host "Kokku sobilike kohtade VMe on $Total"
+
+            </code></pre>
+            </div>
+            <div>
+                <pre><code class="language-powershell">
+# Script paneb tervele clustrile samad portgroupid mis source hostil
+
+$vshost = Read-Host "Enter source host"
+$vtcluster = Read-Host "Enter target cluster"
+
+$Vports = Get-VMHost -Name $vshost | Get-VirtualSwitch -Name "vSwitch0" | Get-VirtualPortGroup | where {($_.Name -NotLike "*Management*") -and ($_.Name -NotLike "VM Network")}
+
+$Vports | ForEach-Object{
+  Get-Cluster -name $vtcluster | Get-VMHost | Get-VirtualSwitch -Name "vSwitch0" | 
+  New-VirtualPortGroup -Name $_.Name -VLanId $_.VLANid
+}
+   
+                </code></pre>
+                </div>
+        </div>
+        </div>
+        <div class="section"> 
+            <h1>Hobid</h1>
+            <p>Populaarseimad hobid</p>
+            <div>
+                <canvas id="myChart"></canvas>
+              </div>
+        
+        </div>
+        <div class="section"> 
+            <h1>Youtube top 100 laulud</h1>
+            <iframe width="1008" height="567" src="https://www.youtube.com/embed/videoseries?list=PLDIoUOhQQPlXr63I_vwF9GD8sAKh77dWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+        
+        </div>
+        <div class="section"> 
+            <h1>Mäng</h1>
+            <p>Mäng on loodud GPT-4 poolt</p>
+            <h1>Number Guessing Game</h1>
+            <p>Guess a number between 1 and 100:</p>
+            <input type="number" id="userGuess" min="1" max="100">
+            <button onclick="checkGuess()">Submit Guess</button>
+            <p id="feedback"></p>
+            <script>
+                let randomNumber = Math.floor(Math.random() * 100) + 1;
+                let attempts = 0;
+        
+                function checkGuess() {
+                    let userGuess = document.getElementById('userGuess').value;
+                    attempts++;
+        
+                    if (userGuess == randomNumber) {
+                        document.getElementById('feedback').innerHTML = `Congratulations! You guessed the number in ${attempts} attempts!`;
+                    } else if (userGuess < randomNumber) {
+                        document.getElementById('feedback').innerHTML = `Too low! Try again. You've had ${attempts} attempts.`;
+                    } else {
+                        document.getElementById('feedback').innerHTML = `Too high! Try again. You've had ${attempts} attempts.`;
+                    }
+                }
+            </script>
+        
+        </div>
+    </div>
+    
+
+</body>
+</html>
