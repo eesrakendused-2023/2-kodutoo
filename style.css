@@ -1,0 +1,55 @@
+.section {
+    text-align: center;
+    font-size: 3em;
+    font-family: arial;
+  }
+#myMenu{
+    list-style-type: none;
+    position:fixed;
+    text-align: center;
+    font-size: 1em;
+    z-index: 99;
+    top: 1%;
+    left: 1%;
+    font-family: arial;
+}
+
+.slide {
+    text-align: top;
+}
+
+.Oskused {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+   }
+
+
+#map { 
+    height: 300px;
+    width: 300px;
+ }
+
+ .language-powershell {
+    
+    width: 100%;
+    height: 30%;
+    font-size: small;
+ }
+
+ .flex-code {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+ }
+
+ .flex-code > div {
+    margin: 5%;
+ }
+
+ #myChart {
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+ }
