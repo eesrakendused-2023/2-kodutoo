@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.css"/>
+    <title>Kristeli Veeb</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#accordion" ).accordion();
+    } );
+    </script>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section s1">
+            <h1>HOME</h1>
+        </div>
+        <div class="section s2">
+            <div class="slide">
+                <h1>TEHTUD TÖÖD</h1>  
+            </div>
+            <div class="slide">
+                <h1>Khai website</h1>
+                <div id="workImg">
+                    <img src="./image/khai1.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <h1>Khai website</h1>
+                <div id="workImg">
+                    <img src="./image/khai2.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <h1>Khai website</h1>
+                <div id="workImg">
+                    <img src="./image/khai3.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <h1>Khai website</h1>
+                <div id="workImg">
+                    <img src="./image/khai4.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <h1>Khai website</h1>
+                <div id="workImg">
+                    <img src="./image/khai5.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <h1>Bakery Shop</h1>
+                <div id="workImg">
+                <img src="./image/bakery1.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <h1>Bakery Shop</h1>
+                <div id="workImg">
+                    <img src="./image/bakery2.png" alt="">
+                    </div>
+                </div>
+        </div>
+        <div class="section s3">
+            <h1>HOBID</h1>
+            <div id="accordion">
+                <h3>JOONISTAMINE</h3>
+                <div>
+                  <p>
+                  Mulle meeldib portreesid joonistada, peamiselt hariliku pliiatsiga A4 paberil.
+                  </p>
+                </div>
+                <h3>VIDEOMONTAAŽ JA HELILOOMING</h3>
+                <div>
+                  <p>
+                  Olen pisut üle 10 aasta tegelenud videote monteerimisega, peamiselt enda lõbuks. <br/>
+                  Armastan filmimuusikat ja olen seda kirjutanud nii enda lõbuks kui ka <br/>
+                  BFMi tudengite poolt tehtud lühifilmidele.<br/>
+                  </p>
+                </div>
+                <h3>FOTOGRAAFIA</h3>
+                <div>
+                  <p>
+                  Naudin vanamoeliselt filmirulliga hetkede tabamist, kasutan selleks Zenit-E fotoaparaati.
+                  </p>
+                </div>
+            </div>
+        </div>
+        <div class="section s4">
+            <div id="music">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/2mm0gZ1SmvRc0rS9PtV9zn?utm_source=generator&theme=0" 
+                width="70%" height="400" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="section s5">
+            <h1>KONTAKT</h1> <br/>
+            <h1>kolkanen@tlu.ee </h1><br/>
+            <a href="https://github.com/KristelKolkanen" style="text-decoration: none;"><h1>Github</h1></a>
+        </div>
+        <div class="section s6">
+            <h1>MÄNG</h1>
+            <div id="score"></div>
+            <canvas id="tetris" width="240" height="400"></canvas>
+            <script src="tetris.js"></script>
+            <a href="https://www.ansoriweb.com/2020/03/javascript-game.html" style="text-decoration: none;"><h1> viide </h1></a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js"></script>
+    
+    <script>
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            scrollHorizontally: true,
+            navigation: true,
+            navigationTooltips: ['Home', 'Tehtud tööd', 'Hobid', 'Muusika', 'Kontakt', 'Mäng'],
+            conrolArrows: false,
+            slidesNavigation: true,
+            keyboardScrolling: true
+        });
+    </script>
+</body>
+</html>
