@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Aron Paco veebileht</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+
+	
+	<link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="examples/examples.css" />
+	<style>
+
+  	/* Style the button */
+	button {
+		background-color: #787878;
+		border: none; 
+		color: white; 
+		padding: 12px 24px; 
+		text-align: center; 
+		text-decoration: none; 
+		display: inline-block; 
+		font-size: 16px; 
+		margin: 4px 2px; 
+		cursor: pointer; 
+		width: 150px;
+	}
+	
+	/* Hover effect */
+	button:hover {
+		background-color: #2b2b2b;
+	}
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:5px;
+		
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Overwriting styles for control arrows for slides
+	* --------------------------------------- */
+	.controlArrow.prev {
+		left: 50px;
+	}
+	.controlArrow.next{
+		right: 50px;
+	}
+
+	/* Overwriting styles for navigation bullets
+	* --------------------------------------- */
+	#fp-nav ul li a span, 
+	.fp-slidesNav ul li a span{
+		background: white;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+<div id="fullpage">
+	<div class="section" id="section0">
+		<div class="intro">
+			<h1>Tere tulemast Aron Paco lehele!</h1>
+			<p>Keri alla, et saada rohkem infot</p>
+			<div class="buttonContainer">
+				<button onclick="location.href='#secondPage'">Oskused</button>
+				<button onclick="location.href='#thirdPage'">Kontakt</button>
+				<button onclick="location.href='#fourthPage'">Tehtud tööd</button><br>
+				<button onclick="location.href='#fifthPage'">Hobid</button>
+				<button onclick="location.href='#sixthPage'">Muusika</button>
+				<button onclick="location.href='#seventhPage'">Mäng</button>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>Minu oskused</h1>
+				<p>
+					Selles sektsioonis saate lugeda minu oskuste kohta
+				</p>
+			</div>
+		</div>
+
+	    <div class="slide" id="slide2">
+			<h1>Programmeerimine</h1>
+            <p>
+                Oskan programmeerida järgmistes keeltes:<br>
+                Python<br>
+                Javascript<br>
+                Java
+            </p>
+		</div>
+
+        <div class="slide" id="slide3">
+			<h1>Rubiku kuubiku lahendamine</h1>
+            <p>
+                Oskan lahendada Rubiku kuubiku 2-3 minutiga
+            </p>
+		</div>
+
+        <div class="slide" id="slide4">
+			<h1>Geoguessr</h1>
+            <p>
+                Olen mängus Geoguessr suht hea
+            </p>
+		</div>
+
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Kontaktandmed</h1>
+            <p>
+				E-maili aadress:
+				<button onclick="location.href='mailto:xd@tlu.ee'">xd@tlu.ee</button>
+            </p>
+		</div>
+	</div>
+    <div class="section" id="section3">
+		<div class="intro">
+			<h1>Tehtud tööd</h1>
+			<div class="buttonContainer">
+				<button onclick="window.open('https://github.com/aronpaco')">GitHub</button>
+				<button onclick="window.open('http://www.tlu.ee/~xd/')">Koduleht</button>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>Minu hobid</h1>
+			<script src="https://d3js.org/d3.v7.min.js"></script>
+			<div id="pie-chart"></div>
+
+
+            <p>
+                Programmeerimine<br>
+				Jalgrattaga sõitmine<br>
+				Autod
+            </p>
+		</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="intro">
+			<h1>Lemmikmuusika</h1>
+			<div id="spotify">
+				<iframe style="border-radius:12px" 
+					src="https://open.spotify.com/embed/playlist/7BRTjuCHyFLhK1mhGkFxET?utm_source=generator" 
+					width="75%" 
+					height="380" 
+					frameBorder="0" 
+					allowtransparency="true"
+					allowfullscreen="" 
+					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+					loading="lazy">
+				</iframe>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section6">
+		<div class="intro">
+			<h1>Mäng</h1>
+                <div id="game">
+					<iframe style = "border-radius:12px"
+						src="https://hextris.io" 
+						width="50%" 
+						height="380"
+						frameborder="0">
+					</iframe>
+				</div>
+			<p>Mäng: <a href='https://hextris.io/' target="_blank">hextris.io</a></p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="dist/fullpage.js"></script>
+<script type="text/javascript" src="examples/examples.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
+        sectionsColor: ['#656565', '#555555', '#464646', '#373737', '#282828', '#D21F3C', '#191919'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Menüü', 'Oskused', 'Kontakt', 'Tehtud tööd', 'Hobid', 'Muusika', 'Mäng']
+    });
+</script>
+
+</body>
+</html>
