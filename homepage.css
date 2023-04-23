@@ -1,0 +1,100 @@
+  
+  body {
+    background-image: url("daytime.jpg");
+    background-repeat:repeat-y;
+    background-position: center center;
+    height: 100vh; 
+    background-size: 100%;
+    font-family: monospace;
+    color: #fff;
+    background-color: #796379af;
+  }
+
+  div {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  img {
+    height: 50%;
+    width: auto;
+    margin-bottom: 15%;
+  }
+
+  #musicList, #portfolioText {
+    padding-top: 105px;
+  }
+
+  canvas {
+      width: 100%;
+      height: 100%;
+
+  }
+
+  #tooltip {
+    background-color: #8d7286;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 22px;
+    width: fit-content;
+    height: 28px;
+  }
+
+  #arrow,
+  #arrow::before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: inherit;
+  }
+    
+   #arrow {
+    visibility: hidden;
+  } 
+    
+  #arrow::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+  }
+
+  #nameText {
+    background-color: #8d728677;
+    border-radius: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-top: 70px;
+  }
+
+  #button {
+    border-color:#8d7286;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #8d7286;
+    color: white;
+  }
+
+  #hobbiesArea {
+    background-color: #8d728696;
+    padding: 2%;
+    border-radius: 5%;
+  }
+
+  #pygameImage {
+    height: 600px;
+    width: auto;
+    margin-bottom: 35%;
+  }
+
+span {
+  background: rgb(54, 44, 53)!important;
+}
+
+#game {
+  height:fit-content;
+  width: fit-content;
+  padding-left: 25%;
+} 

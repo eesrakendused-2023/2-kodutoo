@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Homepage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"/> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.js"/> -->
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+  <body>
+    <nav id="menu">
+    </nav>
+    <div id="fullpage">
+    <div class="section" id="skills">
+      <input type="button" value="Fullscreen" id="button">
+      
+      <h2>Skills</h2>
+            <div>
+                <canvas id="skillChart"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <script>
+            const ctx = document.getElementById('skillChart');
+            Chart.defaults.font.size = 26;
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                labels: ['HTML', 'CSS', 'JAVASCRIPT', 'PYTHON', 'ADOBE PREMIER', 'ADOBE AFTER EFFECTS'],
+                datasets: [{
+                    label: 'Skills by %',
+                    data: [25, 21, 10, 32, 38, 28],
+                    borderWidth: 1
+                }]
+                },
+                options: {
+                    backgroundColor: '#FFFFFF8C',
+                    indexAxis: 'y',
+                scales: {
+                    y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: '#FFFFFF',
+                    }
+                    },
+                    x: {
+                    min: 0,
+                    max: 100,
+                    ticks: {
+                        color: '#FFFFFF',
+                    }
+                    },
+                }
+                }
+            });
+            </script>
+
+    </div>
+    <div class="section" id="portfolio">
+      <h2 id="portfolioText">Portfolio</h2>
+      <p>Here are some of my recent projects:</p>
+      <div class="slide"> <p>Electronic clock in night mode </p><br><img src="clock.png" alt="clock in night mode"> </div>
+      <div class="slide"> <p>Side scroller game made with Pygame</p><br> <img src="python_game.png" alt="pygame side scroller" id="pygameImage"> </div>
+    </div>
+    <div class="section" id="hobbies">
+      <div id="hobbiesArea">
+      <h2>Hobbies</h2>
+      
+      <p>When I'm not coding, I enjoy:</p>
+      <ul>
+        <li>Longboarding</li>
+        <li>Dancing</li>
+        <li>Hiking</li>
+      </ul>
+      </div>
+    </div>
+    <div class="section" id="music">
+      <h2 id="musicList">Music List</h2>
+      <p>Here are some of my favorite songs:</p>
+      <div class="slide"> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1453ctHSd6vU238WGcnwoe?utm_source=generator&theme=0" width="100%" height="800" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> </div>
+      <div class="slide"> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0Bh8FWmJSlJXUhVcSVN5g7?utm_source=generator&theme=0" width="100%" height="800" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+      <div class="slide"> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/474uVhyGgK5MtY9gMcDgGl?utm_source=generator&theme=0" width="100%" height="800" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></iframe></div>
+      <div class="slide"> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3zFBsXhCmBIrupI5MPOKR4?utm_source=generator&theme=0" width="100%" height="800" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+    </div>
+    <div class="section" id="contact">
+        <h2>Contact Info</h2>
+          <div id="tooltip" role="tooltip">
+            previously Merilyn Litvinov
+            <div id="arrow" data-popper-arrow></div>
+          </div>
+          <div id="nameText" aria-describedby="tooltip">
+          <p>Name: Merilyn Hunt</p>
+          <p>Email: merilynl@tlu.ee</p>
+          </div>
+    </div>
+    <div class="section" id="game">
+      <h2>Simple breakout game, press Start Game to begin</h2>
+      <canvas id="myCanvas" width="480" height="320"></canvas>
+      <label for="startGame"></label>
+      <button id="startGame">Start Game</button>
+      <p>Credit: <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html">link to Github</a></p>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.extensions.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.1.0/screenfull.min.js"></script>
+
+
+  <script>
+  new fullpage('#fullpage', {
+    //options here
+    licenseKey:'gplv3-license',
+    autoScrolling:true,
+    navigation: true,
+    navigationPosition: 'right',
+    scrollHorizontally: true,
+    navigationTooltips: ['skills','portfolio','hobbies','music','contact', 'game'],
+    keyboardScrolling: true,
+    scrollingSpeed: 500,
+    slidesNavigation: true,
+    slidesNavPosition: 'bottom',
+    controlArrows: false,
+  });
+  </script>
+  <script>
+    const nameText = document.querySelector('#nameText');
+    const tooltip = document.querySelector('#tooltip');
+    Popper.createPopper(nameText, tooltip, {
+      placement: 'top',
+      modifiers: [
+        {
+      name: 'offset',
+      options: {
+        offset: [0, 10],
+          },
+        },
+      ],
+    });
+  </script>
+  <script>
+    document.getElementById('button').addEventListener('click', () => {
+      if (screenfull.isEnabled) {
+        screenfull.request();
+      } else {
+        // Ignore or do something else
+      }
+    });
+  </script>
+
+  <!-- GAME CODE, link:  https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html-->
+
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var cty = canvas.getContext("2d");
+    var ballRadius = 10;
+    var x = canvas.width/2;
+    var y = canvas.height-30;
+    var dx = 2;
+    var dy = -2;
+    var paddleHeight = 10;
+    var paddleWidth = 75;
+    var paddleX = (canvas.width-paddleWidth)/2;
+    var rightPressed = false;
+    var leftPressed = false;
+    var brickRowCount = 5;
+    var brickColumnCount = 3;
+    var brickWidth = 75;
+    var brickHeight = 20;
+    var brickPadding = 10;
+    var brickOffsetTop = 30;
+    var brickOffsetLeft = 30;
+    var score = 0;
+    var lives = 3;
+
+    var bricks = [];
+    for(var c=0; c<brickColumnCount; c++) {
+        bricks[c] = [];
+        for(var r=0; r<brickRowCount; r++) {
+            bricks[c][r] = { x: 0, y: 0, status: 1 };
+        }
+    }
+
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+    document.addEventListener("mousemove", mouseMoveHandler, false);
+
+    function keyDownHandler(e) {
+        if(e.code  == "ArrowRight") {
+            rightPressed = true;
+        }
+        else if(e.code == 'ArrowLeft') {
+            leftPressed = true;
+        }
+    }
+    function keyUpHandler(e) {
+        if(e.code == 'ArrowRight') {
+            rightPressed = false;
+        }
+        else if(e.code == 'ArrowLeft') {
+            leftPressed = false;
+        }
+    }
+    function mouseMoveHandler(e) {
+        var relativeX = e.clientX - canvas.offsetLeft;
+        if(relativeX > 0 && relativeX < canvas.width) {
+            paddleX = relativeX - paddleWidth/2;
+        }
+    }
+    function collisionDetection() {
+        for(var c=0; c<brickColumnCount; c++) {
+            for(var r=0; r<brickRowCount; r++) {
+                var b = bricks[c][r];
+                if(b.status == 1) {
+                    if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                        dy = -dy;
+                        b.status = 0;
+                        score++;
+                        if(score == brickRowCount*brickColumnCount) {
+                            alert("YOU WIN, CONGRATS!");
+                            document.location.reload();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    function drawBall() {
+        cty.beginPath();
+        cty.arc(x, y, ballRadius, 0, Math.PI*2);
+        cty.fillStyle = "#72476C";
+        cty.fill();
+        cty.closePath();
+    }
+    function drawPaddle() {
+        cty.beginPath();
+        cty.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+        cty.fillStyle = "#72476C";
+        cty.fill();
+        cty.closePath();
+    }
+    function drawBricks() {
+        for(var c=0; c<brickColumnCount; c++) {
+            for(var r=0; r<brickRowCount; r++) {
+                if(bricks[c][r].status == 1) {
+                    var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeft;
+                    var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+                    bricks[c][r].x = brickX;
+                    bricks[c][r].y = brickY;
+                    cty.beginPath();
+                    cty.rect(brickX, brickY, brickWidth, brickHeight);
+                    cty.fillStyle = "#72476C";
+                    cty.fill();
+                    cty.closePath();
+                }
+            }
+        }
+    }
+    function drawScore() {
+        cty.font = "16px Arial";
+        cty.fillStyle = "#72476C";
+        cty.fillText("Score: "+score, 8, 20);
+    }
+    function drawLives() {
+        cty.font = "16px Arial";
+        cty.fillStyle = "#72476C";
+        cty.fillText("Lives: "+lives, canvas.width-65, 20);
+    }
+
+    function draw() {
+        cty.clearRect(0, 0, canvas.width, canvas.height);
+        drawBricks();
+        drawBall();
+        drawPaddle();
+        drawScore();
+        drawLives();
+        collisionDetection();
+
+        if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+            dx = -dx;
+        }
+        if(y + dy < ballRadius) {
+            dy = -dy;
+        }
+        else if(y + dy > canvas.height-ballRadius) {
+            if(x > paddleX && x < paddleX + paddleWidth) {
+                dy = -dy;
+            }
+            else {
+                lives--;
+                if(!lives) {
+                    alert("GAME OVER");
+                    document.location.reload();
+                }
+                else {
+                    x = canvas.width/2;
+                    y = canvas.height-30;
+                    dx = 2;
+                    dy = -2;
+                    paddleX = (canvas.width-paddleWidth)/2;
+                }
+            }
+        }
+
+        if(rightPressed && paddleX < canvas.width-paddleWidth) {
+            paddleX += 7;
+        }
+        else if(leftPressed && paddleX > 0) {
+            paddleX -= 7;
+        }
+
+        x += dx;
+        y += dy;
+        requestAnimationFrame(draw);
+    }
+
+    //start game button handling
+    document.getElementById('startGame').addEventListener('click', () => {
+      draw();
+    });
+
+</script>
+</body>
+</html>
