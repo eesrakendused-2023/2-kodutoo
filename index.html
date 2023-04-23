@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karl Otepalu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.css"/>
+    <link rel="stylesheet" href="fullpage.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section s0">
+            <h1>Minu lehekülg</h1>
+        </div>
+        <div class="section s1">
+            <div class="slide"> 
+                <h1>Hobid</h1>
+            </div>
+            <div class="slide"> 
+                <h2>Jooksmine</h2>
+            </div>
+            <div class="slide"> 
+                <h2>Arvutimängud</h2>
+            </div>
+            <div class="slide"> 
+                <h2>Mustkunst</h2>
+            </div>
+        </div>
+        <div class="section s2">
+            <div class="slide"> 
+                <h1>Oskused</h1>
+            </div>
+            <div class="slide"> 
+                <h2>Videotöötlus</h2>
+            </div>
+            <div class="slide"> 
+                <h2>Mustkunst</h2>
+            </div>
+            <div class="slide"> 
+                <h2>Veebiprogrammeerimine</h2>
+            </div>
+        </div>
+        <div class="section s3">
+            <h1>Tehtud programmid</h1>
+            <br>
+            <h3>Leiab minu <a href="https://github.com/KOtepalu">githubist</a>!</h3>
+        </div>
+        <div class="section s4">
+            <h1>Muusika</h1>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/057m2jP8zrBCZulsYZxdQn?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="section s5">
+            <h1>Kontakt</h1>
+            <h3>email: kotepalu@tlu.ee</h3>
+        </div>
+        <div class="section s6">
+            <h1>Mäng</h1>
+            <div id="game">
+                <canvas id="gameCanvas" style="width: 512px; height: 384px;" width="1024" height="768"></canvas>
+                <!--mängu kood: https://js13kgames.com/entries/racer -->
+            </div>  
+            <script src="main.min.js"></script>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.extensions.min.js"></script>
+
+    <script>
+
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            navigation: true,
+            anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6'],
+            navigationTooltips: ['Minu leht', 'Hobid', 'Oskused', 'Tehtud programmid', 'Muusika', 'Kontakt', 'Mäng'],
+            showActiveTooltip: true,
+            controlArrows: false,
+            slidesNavigation: true,
+            keyboardScrolling: false,
+        })
+
+    </script>
+</body>
+</html>
