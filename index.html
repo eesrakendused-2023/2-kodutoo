@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.slim.min.js" integrity="sha512-fYjSocDD6ctuQ1QGIo9+Nn9Oc4mfau2IiE8Ki1FyMV4OcESUt81FMqmhsZe9zWZ6g6NdczrEMAos1GlLLAipWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
+    <link rel="stylesheet" href="app.css">
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    
+    
+    
+    <script  src="hobbies.js"></script>
+    <script  src="portfolio.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+
+    <style>
+      
+    </style>
+  </head>
+  <body>
+
+    <div id="navbar">
+      <ul>
+        <li><a href="#skills" class="active">My Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#hobbies">My Hobbies</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#music">My Playlist</a></li>
+        <li><a href="#fun">Have Fun!</a></li>
+      </ul>
+    </div>
+
+
+    <div id="fullpage">
+
+      <div class="section" data-anchor="skills">
+        
+        <div class="slide"> 
+            <h1>Process Improvement</h1>
+            <h2>Identifying and improving operational workflows to increase efficiency and reduce costs.</h2>
+        </div>
+        <div class="slide"> 
+            <h1>Project Management</h1>
+            <h2>Planning, organizing, and overseeing resources to ensure project goals are achieved within constraints.</h2>
+        </div>
+
+        <div class="slide"> 
+            <h1>Scrum</h1>
+            <h2>An agile framework for managing and completing complex projects.</h2>
+        </div>
+
+        <div class="slide"> 
+            <h1>BPMN</h1>
+            <h2>A graphical notation for modeling business processes in a workflow.</h2>
+        </div>
+
+        <div class="slide"> 
+            <h1>Data Analysis</h1>
+            <h2>Collecting and interpreting data to draw conclusions and inform decision-making.</h2>
+        </div>
+
+        <div class="slide"> 
+            <h1>Communication</h1>
+            <h2>Conveying information effectively and clearly to others.</h2>
+        </div>
+
+        <div class="slide"> 
+            <h1>Software</h1>
+            <h2>Developing, maintaining, and improving computer programs and applications.</h2>
+        </div>
+
+    </div>
+
+      <div class="section" data-anchor="portfolio">
+        <div id="portfolio"></div>
+        
+        <div class="filters filter-button-group">
+		  <ul><h4>
+		    <li class="active" data-filter="*">All</li>
+		    <li data-filter=".webdesign">Web Design</li>
+		    <li data-filter=".webdev">Web Development</li>
+		    <li data-filter=".brand">Brand Identity</li>
+		  </h4></ul>
+		</div>
+
+		<div class="content grid">
+
+		  <div class="single-content webdesign webdev grid-item">
+				<img class="p2" src="https://images.squarespace-cdn.com/content/v1/5ec689480cc22c2d441e152f/1627571233175-469IFVJU3MWOOHFI5LN9/copywriting-for-website-design-pet-photographer-website.jpg?format=1000w">
+		  </div>
+
+		  <div class="single-content brand webdesign grid-item">
+				<img class="p2" src="https://images.squarespace-cdn.com/content/v1/5f3172b0975ad8765bec1ea6/1678130268624-EKIV3KEXD21JZTA6Q764/squarespace%2Bwebsite%2Bdesign%2Bfor%2Bcolorado%2Brailroad%2Bphotographer%2Bby%2Bdenver%2Bsquarespace%2Bwebsite%2Bdesigners%2Bagave%2Bstudio.png?format=1000w">
+		  </div>
+
+		  <div class="single-content brand grid-item">
+				<img class="p2" src="https://images-platform.99static.com//CDD7T95zSmMDYwxzsMnVa1ydFbg=/89x69:1514x1494/fit-in/500x500/99designs-contests-attachments/112/112747/attachment_112747475">
+		  </div>
+            
+            <div class="single-content webdesign grid-item">
+				<img class="p2" src="https://images.squarespace-cdn.com/content/v1/5e8d08e3fa7e494b0d767a08/1640233636657-H63ZS2SAU6D659RQXCOU/fashion-website-on-ipad.jpg?format=1000w">
+		  </div>
+            
+            <div class="single-content webdesign grid-item">
+				<img class="p2" src="https://images.squarespace-cdn.com/content/v1/61394864291bae3f6922157e/1660775030276-C2Q4TWVZV1YAGIV4BUQG/The-coast-kit-squarespace-web-design-greenroom-therapy-wellness-website.gif?format=1000w">
+		  </div>
+            
+            <div class="single-content webdesign brand grid-item">
+				<img class="p2"src="https://images.squarespace-cdn.com/content/v1/558a7866e4b03a72af49aa83/1497619384270-B8FJJVHXI1HBJHLP0VM5/brand-design-agency-london-new-york-california-toronto?format=1000w">
+		  </div>
+            
+            <div class="single-content webdesign webdev grid-item">
+				<img class="p2"src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/83cd1535791117.5703ed90de1cf.gif">
+		  </div>
+
+          <div class="single-content webdesign webdev grid-item">
+				<img class="p2"src="https://images.squarespace-cdn.com/content/v1/52228473e4b08fc4fa158a4f/1593542903116-WZ1JQ09QJY9GDYKNHN8Y/Nest+Home+and+Outdoor+Hot+Springs+Arkansas+Squarespace+Website+Design+and+Branding+by+Rosemary+Hallmark+Creative.gif">
+		  </div>
+
+          <div class="single-content webdesign webdev grid-item">
+				<img class="p2"src="https://static.showit.co/file/BA483o1STo6TNaxWOFnwgQ/137492/bswell-wellness-coach-branding-2.gif">
+		  </div>
+
+          <div class="single-content webdesign webdev grid-item">
+				<img class="p2"src="https://i.pinimg.com/originals/75/31/72/7531726654f075bc0172b006cf6ab68f.gif">
+		  </div>
+            
+        
+        </div>
+        
+      </div>
+
+
+      <div class="section" data-anchor="hobbies">
+        <section class="hobbies-section">
+            <div class="hobby" id="hobby-padel">Padel</div>
+            <div class="hobby" id="hobby-beach-tennis">Beach Tennis</div>
+            <div class="hobby" id="hobby-gym">Gym</div>
+            <div class="hobby" id="hobby-travelling">Travelling</div>
+            <div class="hobby" id="hobby-skiing">Skiing</div>
+        </section>
+        
+      </div>
+
+        <div class="section" data-anchor="contact">
+        <h1>Contact Me</h1>
+        <form id="contact-form">
+            <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        <div id="status"></div>
+    </div>
+
+
+      <div class="section" data-anchor="music">
+        <h1>My Playlist</h1>
+        <h2>Let the beat move you and the lyrics inspire you to chase your goals, overcome obstacles, and live your best life. </h2>
+        <h2>So turn up the volume, and let the music be your guide.</h2>
+        <div class="spotify">
+            
+            <iframe
+            title="Spotify Embed: Recommendation Playlist "
+            src="https://open.spotify.com/embed/playlist/76wy8wHBDOpjCFbQacXMHB?utm_source=generator&theme=0"
+            width="100%"
+            height="800%"
+            
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+            
+        </div>
+      </div>
+
+      <div class="section" data-anchor="fun">
+        <div class="game-container">
+                <h1 class="game-title">Guess the Number</h1>
+                <p class="game-instructions">Try to guess the number between 1 and 10.</p>
+            <div class="game-input-container">
+                <input type="number" id="guessInput" min="1" max="10" class="game-input">
+                <button onclick="guessNumber()" class="game-button">Guess</button>
+            </div>
+                <p id="guessResult" class="game-result"></p>
+    </div>
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      new fullpage("#fullpage", {
+        autoScrolling: true,
+        scrollHorizontally: true,
+        scrollOverflow: true,
+        sectionSelector: '.section',
+        
+ 
+        
+        controlArrows: true,
+        
+        scrollingSpeed: 800,
+        onLeave: function(origin, destination, direction) {
+          var navLinks = document.querySelectorAll("#navbar a");
+          for (var i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.remove("active");
+          }
+          navLinks[destination.index].classList.add("active");
+        }
+      });
+
+
+   
+    </script>
+  </body>
+</html>

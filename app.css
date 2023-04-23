@@ -1,0 +1,437 @@
+/* Set the background image for each section */
+        .section:nth-child(1) .fp-slide:nth-child(1) {
+        background-image: url('images/2988500.jpg');
+        }
+
+        .section:nth-child(1) .fp-slide:nth-child(2) {
+        background-image: url('images/wp6622477.jpg');
+        }
+
+        .section:nth-child(1) .fp-slide:nth-child(3) {
+        background-image: url('images/qsixk71w7hu3alee.jpg');
+        }
+
+         .section:nth-child(1) .fp-slide:nth-child(4) {
+        background-image: url('images/plain-blue-28.jpg');
+        }
+
+         .section:nth-child(1) .fp-slide:nth-child(5) {
+        background-image: url('images/High_resolution_wallpaper_background_ID_77701738023.jpg');
+        }
+
+         .section:nth-child(1) .fp-slide:nth-child(6) {
+        background-image: url('images/d705y72-5837ac27-070f-49f9-8d49-82ee3e44b33b.jpg');
+        }
+
+         .section:nth-child(1) .fp-slide:nth-child(7) {
+        background-image: url('images/9Ph4mZ.png');
+        }
+
+
+      .section:nth-child(2) {
+        background-color: rgb(125, 89, 125);
+        background-size: cover;
+        background-position: center;
+      }
+      .section:nth-child(3) {
+        background-image: url('images/travel-light-vacation-mountain-holiday-detail-colors-50mm-prime-high-Nikon-colorful-photographer-dof-natural-paddy-terrace-hiking-getaway-altitude-tracks-spot-handheld-fields-crops-produce-local-shallow-simple-d90-syahrel-752867.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+
+       
+
+      .section:nth-child(4) {
+        
+        background-color: rgb(125, 89, 125);
+        background-size: cover;
+        background-position: center;
+      }
+      .section:nth-child(5) {
+     
+        background-image: url('images/Dynamics-in-Music-The-Key-To-Emotional-Productions.jpeg');
+        background-size: cover;
+        background-position: center;
+      }
+       .section:nth-child(6) {
+        background-color: rgb(57, 57, 57);
+        background-size: cover;
+        background-position: center;
+      }
+      
+     
+    
+      
+      .section:nth-child(1) h1 {
+        font-size: 4em;
+      }
+
+      span {
+        background-color: white !important;
+      }
+
+     h1 {
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 0 rgb(250, 248, 248), -1px -1px 0 rgb(253, 252, 252), 1px -1px 0 rgb(245, 244, 244), -1px 1px 0 rgb(250, 248, 248);
+        font-size: 60px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        letter-spacing: 2px;
+        
+    }
+
+
+      .fp-slidesNav.fp-bottom {
+         margin-left: 1m !important;
+      }
+
+      /* navbar*/
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(127, 87, 127, 0.959);
+        }
+
+        #navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px; /* set navbar height */
+            }
+
+        #navbar li {
+            margin: 0 10px;
+            padding: 10px;
+        }
+
+            #navbar a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            }
+
+            #navbar a.active {
+            color: rgb(58, 56, 56);
+            }
+
+            @media screen and (max-width: 768px) {
+            #navbar ul {
+                flex-direction: column;
+                height: auto;
+            }
+            #navbar li {
+                margin: 5px;
+            }
+            }
+
+      /*game*/
+
+    .game-container {
+        background-color: rgb(125, 89, 125);
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.257);
+        padding: 20px;
+        text-align: center;
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .game-title {
+        color: rgb(255, 252, 252);
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    
+    .game-instructions {
+        color: rgb(255, 255, 255);
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .game-input-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .game-input {
+        background-color: #eee;
+        border: none;
+        border-radius: 5px;
+        color: #333;
+        font-size: 1.2rem;
+        padding: 10px;
+        text-align: center;
+        width: 50%;
+    }
+    
+    .game-button {
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1.2rem;
+        margin-left: 10px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .game-button:hover {
+        background-color: #666;
+    }
+    
+    .game-result {
+        color: #333;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    /*hobbies*/
+
+    .hobbies-section {
+        
+        color: rgb(255, 255, 255);
+        text-shadow: rgb(255, 255, 255);
+        height: 600px; 
+        padding-bottom: 10px;
+    }
+
+    .hobby {
+        font-size: 60px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        padding-left: 200px;
+        padding-top: 50px;
+        
+    }
+
+
+    .fp-controlArrow.fp-next {
+        right: 15px;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #fff;
+    }
+
+    .fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+    .spotify {
+    max-width: 800px;
+    margin: 0 auto;
+    }
+
+
+    /*form*/
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  background-color:rgb(125, 89, 125);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/*portfolio*/
+
+#portfolio .item {
+  width: 350px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+#filters {
+  margin-top: 20px;
+}
+
+#filters button {
+  background-color: #eee;
+  border: none;
+  
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#filters button.active {
+  background-color: #ccc;
+}
+
+
+
+p {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  text-align: center;
+  padding-top: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand img {
+  width: 50px;
+}
+
+.p1:hover, .p2:hover {
+	opacity: .3;
+  cursor: pointer;
+}
+
+h4 {
+	color: grey;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+#portfolio p {
+	color: grey;
+	font-size: 12px;
+	font-weight: 200;
+}
+
+.content {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: center;
+}
+
+.single-content img {
+	width: 290px;
+	height: 100%;
+	margin: 10px;
+}
+
+.filters {
+	width: 100%;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	
+}
+
+li {
+	display: inline;
+	padding: 10px 25px;
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 400;
+	cursor: pointer;
+  	text-transform: uppercase;
+  	letter-spacing: .2em;
+}
+
+li:hover {
+	color: #a6a6a6;
+}
+
+li.active {
+	color: #ccc;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+}
+
+
+
+#portfolio {
+  padding-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; 
+  max-width: 80%;
+  margin: auto;
+  justify-content: center; 
+}
+
+
+.single-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.single-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
