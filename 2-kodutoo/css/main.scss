@@ -1,0 +1,153 @@
+h1 {
+    font-family: Tahed; src: url(Tahed-Regular.ttf);
+    font-size: 10rem;
+    text-align: center;
+    color: black;
+}
+h2 {
+    font-family: Tahed; src: url(Tahed-Regular.ttf);
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    margin-top: 0px;
+    justify-content: center;
+    padding-top: 100px;
+}
+h6{
+    font-family: Tahed; src: url(Tahed-Regular.ttf);
+    font-size: xx-large;
+}
+
+.s1 {
+    background: url('../images/valge_taust.jpg');
+    background-size: cover;
+    h1{
+        color: black;
+        font-size: 7rem;
+    }
+
+}
+.s2 {
+    background: url('../images/valge_taust2.jpg');
+    background-size: cover;
+    h1{
+        color: black;
+        font-size: 4rem;
+    }
+
+
+}
+.s3 {
+    background: url('../images/valge_taust3.jpg');
+    background-size: cover;
+    h1{
+        color: black;
+        font-size: 4rem;
+    }
+    h2{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        padding-top: 0px;
+    }
+}
+.s4 {
+    background: url('../images/valge_taust4.jpg');
+    background-size: cover;
+    h1{
+        color: Black;
+        font-size: 4rem;
+    }
+}
+.s5 {
+    background: url('../images/valge_taust.jpg');
+    background-size: cover;
+    h1{
+        color: black;
+        font-size: 4rem;
+    }
+}
+.s6 {
+    background: url('../images/valge_taust2.jpg');
+    background-size: cover;
+    h1{
+        color: black;
+        font-size: 4rem;
+    }
+}
+.s7 {
+    background: url('../images/valge_taust3.jpg');
+    background-size: cover;
+    h1{
+        color: black;
+        font-size: 4rem;
+    }
+}
+span{
+    background: black !important;
+    color: black;
+}
+
+div#menu{
+    font-family: Tahed; src: url(Tahed-Regular.ttf);
+    font-size: xx-large;
+    text-align: center;
+    color: black;
+    word-spacing: 4rem;
+    a{
+        font-family: Tahed; src: url(Tahed-Regular.ttf);
+        font-size: xx-large;
+        text-align: center;
+        color: black;
+        font-size: 4rem;
+        text-decoration: underline;
+    }
+}
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -2px;
+    color: black;
+    font-size: 14px;
+    font-family: arial,helvetica,sans-serif;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+
+    cursor: pointer;
+}
+
+#fp-nav ul, .fp-slidesNav ul {
+    
+    padding: 0;
+}
+.fp-controlArrow.fp-prev {
+    left: 200px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent black transparent transparent;
+
+}
+.fp-controlArrow.fp-next {
+    right: 200px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent black;
+}
+p {
+    display: block;
+    margin-block-start: 3em;
+    margin-block-end: 1em;
+    margin-inline-start: 100px;
+    margin-inline-end: 100px;
+}
+b{
+    font-family: Tahed; src: url(Tahed-Regular.ttf);
+    font-size: xx-large;
+}
+.oskused{
+    font-size: 2rem;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 600px;
+    margin-top: -100px;
+}
