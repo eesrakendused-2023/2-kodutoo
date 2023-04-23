@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="kodutoo2.js" defer></script>
+		<link rel="stylesheet" href="kodutoo2.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js" integrity="sha512-GS3CSFQ4aj+0fL2a0wV1ouvpdbTZ3eEUriXTpXt50dc0CkO1fgyWuLoPA5NWy1PAWmcaZNneM+OAThgCqPnX+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.css" integrity="sha512-z04xx19bk6Q/FewwTQYDcyJsZKDglEvuszVGtMUOeaPwTl6p9oa914VzJRBDT/HLCYzG+GQ03xfOa9jCzcNLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+		<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+		<link rel="stylesheet" href="./highlight/styles/default.min.css">
+		<script src="./highlight/highlight.min.js"></script>
+		<meta charset="UTF-8">
+		<title>Teine kodutöö</title>
+		<link rel="stylesheet" href="kodutoo2.css">
+		<title>Kodutöö</title>
+		
+	</head>
+	<body>
+		<div id="fullpage">
+			<div class="section">
+				<H1>Teine kodutöö</H1>
+				<p>Viktorija Tolkaciova</p>
+				<a href="https://github.com/Vikatolk/2-kodutoo">Repo</a>
+				
+				<nav>
+					<a href="#firstPage">Pealeht</a>
+					<a href="#secondPage">Oskused</a>
+					<a href="#thirdPage">Tehtud tööd</a>
+					<a href="#fourthPage">Kontaktandmed</a>
+					<a href="#fifthPage">Hobid</a>
+					<a href="#sixthPage">Youtube</a>
+					<a href="#seventhPage">Mäng</a>
+					<div id="indicator"></div>
+				  </nav>
+				
+			</div>
+			
+			<div class="section">
+				<div class="slide" data-anchor="slide2">
+					<h1>Oskused</h1>
+				</div>
+				<div class="slide" data-anchor="slide2">
+					<div class="Oskused">
+						<div class="Pilt">
+							<img src="./img/foto.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="slide" data-anchor="slide4">
+					<div class="vmware">
+						<div class="pilt">
+							<img src="./img/toit.png" alt="">
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+
+
+			<div class="section">
+				<div class="slide" data-anchor="slide2">
+					<h1>Tehtud tööd</h1>
+				</div>
+				<div class="slide" data-anchor="slide2">
+					<div class="Tehtudtööd">
+						<div class="Pilt">
+							<img src="./img/Screenshot 2023-04-21 153547.png" alt="">
+						</div>
+						<div class="tekstid">
+							<p>veebisaidi loomine MAMP-iga</p>
+						</div>
+					</div>
+				</div>
+				<div class="slide" data-anchor="slide4">
+					<div class="vmware">
+						<div class="pilt">
+							<img src="./img/Screenshot 2023-04-21 153622.png" alt="">
+						</div>
+						<div class="tekstid">
+							<p>veebisaidi loomine MAMP-iga</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<h1>Kontaktandmed</h1>
+				<p>Tel: +372 58160927</p>
+				<p>Email: vikatolk@tlu.ee</p>
+			</div>
+			<div class="section">
+				<h1>Hobid</h1>
+				<p>Minu hobid</p>
+				<div>
+					<canvas id="myChart"></canvas>
+				</div>
+			</div>
+			<div class="section">
+				<h1>Youtube: [MV] Whee In(휘인) _ EASY (Feat. Sik-K) </h1>
+				<iframe width="1008" height="567" src="https://www.youtube.com/embed/KNWLQI5_JLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+			<div class="section">
+				<div class="game">
+				<h4>Mäng</h4>
+				<p>Vali kivi, käärid või paber:</p>
+  <input type="text" id="player-choice">
+  <button onclick="play()">mängida</button>
+  <p id="result"></p>
+  
+  <script>
+    function play() {
+      let playerChoice = document.getElementById("player-choice").value;
+      let computerChoice = Math.floor(Math.random() * 3);
+      
+      switch(playerChoice) {
+        case "Kivi":
+          if(computerChoice === 0) {
+            document.getElementById("result").innerHTML = "viik";
+          } else if(computerChoice === 1) {
+            document.getElementById("result").innerHTML = "võit";
+          } else {
+            document.getElementById("result").innerHTML = "Kaotus";
+          }
+          break;
+        case "Käärid":
+          if(computerChoice === 0) {
+            document.getElementById("result").innerHTML = "Kaotus";
+          } else if(computerChoice === 1) {
+            document.getElementById("result").innerHTML = "viik";
+          } else {
+            document.getElementById("result").innerHTML = "võit";
+          }
+          break;
+        case "Paber":
+          if(computerChoice === 0) {
+            document.getElementById("result").innerHTML = "võit";
+          } else if(computerChoice === 1) {
+            document.getElementById("result").innerHTML = "Kaotus";
+          } else {
+            document.getElementById("result").innerHTML = "viik";
+          }
+          break;
+        default:
+          document.getElementById("result").innerHTML = "Vale sisestus";
+      }
+    }
+  </script>
+	</body>
+</html>
