@@ -1,4 +1,7 @@
 # 2-kodutoo
+
+Link minu veebilehele: https://www.tlu.ee/~kleenmaa/kodutoo2/website.html
+
 Teine kodutöö
 
 ## Tähtaeg 23.04.2023 23:59
