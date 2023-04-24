@@ -1,10 +1,9 @@
-// получаем доступ к блоку, где будут уведомление
+// võtsin koodi github.com/gabrielecirulli/2048
 const alert = document.getElementById("alert");
-// добавляем ему обработчик событий
-// при нажатии в любом месте экрана у уведомления очистится признак класса и он снова станет невидимым
+
 alert.addEventListener("click", () => alert.className = "");
 
-// класс, который будет отвечать за все фигуры
+
 class Piece {
   // что будет происходить при создании новой фигуры
   constructor(color, density, height, shape) {
