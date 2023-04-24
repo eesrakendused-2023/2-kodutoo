@@ -1,0 +1,100 @@
+h1, h2, h3 {
+    font-family: 'Monospace';
+    text-align: center;
+    color: black;
+    text-shadow: 2cm;
+}
+
+a {
+    color: navajowhite;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2{
+    font-size: 3em;
+    color: white;
+}
+
+span {
+    background: white !important;
+}
+
+.s0 {
+    background: url('pics/taust.jpeg');
+    background-size: cover;
+}    
+.s1 {
+background: url('pics/tennis2.jpeg');
+background-size: cover;
+}
+
+.s2 {
+    background: url('pics/taust2.jpeg');
+    background-size: cover;
+}
+
+.s3 {
+    background: url('pics/taust6.jpeg');
+    background-size: cover;
+}
+
+.s4 {
+    background: url('pics/taust7.jpeg');
+    background-size: cover;
+}
+
+.s5 {
+    background: url('pics/taust4.jpeg');
+    background-size: cover;
+}
+
+.s6 {
+    background: url('pics/game.jpg');
+    background-size: cover;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+#game {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+}
+#character {
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+#block{
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 500px;
+    animation: block 1s infinite linear;
+}
+@keyframes block{
+    0%{left: 500px}
+    100%{left: -20px}
+}
+p{
+    text-align: center;
+}
