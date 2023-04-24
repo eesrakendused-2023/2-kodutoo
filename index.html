@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodutöö 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.css" integrity="sha512-DbP1b6q56Ud5q0L+lvw9COyyH/+pN1lVmySvun4UsH8vmfdIHou+PAHfMnGXf6Fvd9rYLjSojeuPhQz2euU1cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="script.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#mainPage">Pealeht</a></li>
+            <li><a href="#skills">Oskused</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#projects">Tehtud tööd</a></li>
+            <li><a href="#hobbies">Hobid</a></li>
+            <li><a href="#playlist">Playlist</a></li>
+            <li><a href="#game-board">Mäng</a></li>
+        </ul>
+    </nav>
+    <div id="fullpage">
+        <div class="section active" id="mainPage">Merette Arula
+            <p>Teine kodutöö</p>
+            <p><a href="https://github.com/merettearula/2-kodutoo">Minu github</a></p>
+        </div>
+        <div class="section" id="skills">
+            <div class="slider">
+                <div class="slide">
+                    <h3>Minu oskused: </h3>
+                </div>
+                <div class="slide">
+                    <img src="image1.jpg" alt="Skill 1">
+                        <h3>PHP</h3>
+                </div>
+                <div class="slide">
+                    <img src="image2.jpg" alt="Skill 2">
+                        <h3>HTML</h3>
+                </div>
+                <div class="slide"><img src="image3.jpg" alt="Skill 3">
+                    <h3>Projekti juhtimine</h3>
+                </div>
+                <div class="slide"><img src="image4.jpg" alt="Skill 4">
+                    <h3>SQL</h3>
+                </div>
+              </div>
+        </div>
+        <div class="section" id="contact">Kontakt:
+            <p>merette.arula@gmail.com</p>
+        </div>
+        <div class="section" id="projects">
+            <h2>Tehtud tööd:</h2>
+            <p>Eelnevalt tehtud tööd on näha <a href="https://github.com/merettearula?tab=repositories">githubis</a></p>
+        </div>
+        <div class="section" id="hobbies">
+            <h2>Hobid</h2>
+            <div class="image-container">
+                <figure>
+                    <img src="gym.jpg" alt="Jõutreening" width="300" height="200">
+                    <figcaption>Jõutreening</figcaption>
+                </figure>
+                <figure>
+                    <img src="gymnastics.jpg" alt="Akrobaatika" width="300" height="200">
+                    <figcaption>Akrobaatika</figcaption>
+                </figure>
+
+            </div>
+        </div>
+        <div class="section" id="playlist">
+            <h3>Hea playlist:</h3>
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO2NufN6" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>  
+        <div class="container">
+        <div class="section" id="game-board" style="max-width: 500px; max-height: 805px; border: 1px solid black;">
+            <div class="target"></div>
+        </div>
+        <div id="game"><h2>See mäng on Chat-GPT loodud. Mängu alustamiseks kliki oranzile alale. Mäng loob juhuslikult asetseva punkti mängulaual, mida kasutaja peab klõpsama, et saada punkte. Mäng kestab 30 sekundit ning lõpus kuvatakse kasutaja saavutatud punktisumma. Kood kasutab jQuery-d punktide arvutamiseks, mängulaual objektide manipuleerimiseks ja sündmuste käsitsemiseks.</h2></div>
+            <div id="score">Score: <span>0</span>
+                <p>Siia saaks kuvada eelmisi skoore, hetkel on graafikul sisse kirjutatud eelmised skoorid.</p>
+                <canvas id="score-chart" width="400" height="200"></canvas>
+            </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+         $(document).ready(function() {
+            var score = 0;
+            var timeLeft = 30;
+            var gameStarted = false;
+            var timer;
+
+            function getRandomPosition() {
+                var x = Math.floor(Math.random() * ($('#game-board').width() - $('.target').width()));
+                var y = Math.floor(Math.random() * ($('#game-board').height() - $('.target').height()));
+
+                x = Math.max(x, 0);
+                y = Math.max(y, 0);
+                x = Math.min(x, $('#game-board').width() - $('.target').width());
+                y = Math.min(y, $('#game-board').height() - $('.target').height());
+
+                return [x,y];
+            }
+
+            function updateScore() {
+                score++;
+                $('#score span').text(score);
+            }
+
+            function updateTimer() {
+                $('#time-left span').text(timeLeft);
+                timeLeft--;
+                if (timeLeft == -1) {
+                    clearInterval(timer);
+                    $('.target').off('click');
+                    alert('Game over! Your score is ' + score);
+                }
+            }
+
+            function addTarget() {
+                var pos = getRandomPosition();
+                $('.target').css('left', pos[0] + 'px').css('top', pos[1] + 'px').show();
+            }
+
+            function handleClick() {
+                if (!gameStarted) {
+                    gameStarted = true;
+                    timer = setInterval(updateTimer, 1000);
+                }
+                $('.target').hide();
+                updateScore();
+                addTarget();
+            }
+
+            $('#game-board').one('click', handleClick);
+            $('.target').on('click', handleClick);
+        });
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js" integrity="sha512-GS3CSFQ4aj+0fL2a0wV1ouvpdbTZ3eEUriXTpXt50dc0CkO1fgyWuLoPA5NWy1PAWmcaZNneM+OAThgCqPnX+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
