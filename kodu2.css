@@ -1,0 +1,56 @@
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #4dcc42;
+    display: flex;
+    justify-content: center;
+  }
+
+  ul.menu li {
+    float: right;
+  }
+
+  ul.menu li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 20px 15px;
+    text-decoration: none;
+  }
+
+  ul.menu li a:hover {
+    background-color: #1cbb07;
+  }
+
+  .big-image img{
+    max-width: 90vw;
+}
+
+#picContainer img.custom-size{
+    width: 5px;
+    height: auto;
+}
+
+button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 5px 5px;
+    font-size: 1em;
+    background-color: rgb(44, 121, 8);
+    color: rgb(199, 199, 199);
+    height: 20px;
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+    border-radius: 15px;
+    
+}
+
+.myframe {
+    height: 800;
+}
+
+
