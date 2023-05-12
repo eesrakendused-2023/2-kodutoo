@@ -1,200 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Roland Silt</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-7ltmoSZxkh74M7kHr/UZrDzexmTgFupm24bKIL3Nf9XKyAtxG/11C7cYhYRiV7Nxb6d2U6mgf3yqLhXPSymcmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="library2.css" />
-    <head>
-      <title>Poomis mäng</title>
-      <script type="text/javascript">
-        var words = ["javascript", "computer", "programming", "website"]; 
-        var selectedWord = words[Math.floor(Math.random() * words.length)]; 
-        var guessedLetters = []; 
-        var remainingGuesses = 6; 
-        var output = document.getElementById("output");
-    
-        function displayWord() {
-          var wordDisplayed = "";
-          for (var i = 0; i < selectedWord.length; i++) {
-            if (guessedLetters.includes(selectedWord.charAt(i))) {
-              wordDisplayed += selectedWord.charAt(i);
-            } else {
-              wordDisplayed += "_ ";
-            }
-          }
-          output.innerHTML = wordDisplayed;
-        }
-    
-        function guessLetter() {
-          var guess = document.getElementById("guess").value;
-          document.getElementById("guess").value = ""; 
-          if (guessedLetters.includes(guess)) {
-            alert("You've already guessed that letter!");
-          } else if (selectedWord.includes(guess)) {
-            guessedLetters.push(guess);
-            displayWord();
-            if (!output.innerHTML.includes("_")) {
-              alert("Congratulations, you've correctly guessed the word: " + selectedWord);
-            }
-          } else {
-            remainingGuesses--;
-            document.getElementById("remaining").innerHTML = remainingGuesses;
-            if (remainingGuesses == 0) {
-              alert("Sorry, you've lost. The word was " + selectedWord);
-            }
-          }
-        }
-      </script>
-    </head>
-    <body onload="displayWord()">
-      <h1>Hangman Game</h1>
-      <p>Guess the word by typing in letters below. You have 6 incorrect guesses before you lose!</p>
-      <p>Word: <span id="output"></span></p>
-      <p>Guesses remaining: <span id="remaining">6</span></p>
-      <input type="text" id="guess">
-      <button onclick="guessLetter()">Guess</button>
-    </body>
-    
-      <p>Mängu source on <a href="https://chat.openai.com/">Chatgpt</a>.</p>
-
-    </body>
-    <style>
-      body {
-        background-color:rgb(238, 160, 101);
-      }
-
-     
-      #contact-button {
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 10px 20px;
-        background-color: #fff;
-        border: 1px solid #000;
-        cursor: pointer;
-      }
-
-     
-      .popup {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #e98c1a;
-        padding: 20px;
-        border: 1px solid #000;
-        display: none;
-        z-index: 9999;
-      }
-
-      .swiper-container {
-        width: 100%;
-        height: 100%;
-      }
-      
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .swiper-slide img {
-        max-width: 100%;
-        max-height: 100%;
-      }
-    </style> 
-  </head>
-  <body>
-    <div id="contact-button">Contact</div>
-    <div class="popup" id="contact-popup">
-      <h2>Contact Information</h2>
-      <p>Email: Rsilt@tlu.ee</p>
-      <p>Phone: 555-555-5555</p>
-      <button id="close-popup">Close</button>
-    </div>
-
-    <div id="menu">
-      <ul>
-        <li data-menuanchor="section1"><a href="#section1">1. Peatükk</a></li>
-        <li data-menuanchor="section2"><a href="#section2">2. Peatükk</a></li>
-        <li data-menuanchor="section3"><a href="#section3">3. Peatükk</a></li>
-        <li data-menuanchor="section4"><a href="#section4">4. Peatükk</a></li>
-        <li data-menuanchor="section5"><a href="#section5">Hobid</a></li>
-        <li data-menuanchor="section6"><a href="#section6">Lebron James</a></li>
-        <li data-menuanchor="section7"><a href="#section7">muss</a></li>
-      </ul>
-    </div>
-
-    <div class="section" id="section1">
-      <h1>1. Peatükk</h1>
-      <p>Tere tulemast</p>
-      <button onclick="window.location.href='library1.html';">Library 1
-
-
-    </div>
-
-    </div>
-      <div class="section" id="section2">
-        <h1>2. Peatükk</h1>
-        <p>See on üks uhke veebileht.</p>
-        <button>2. Library</button>
-      </div>
-      <div class="section" id="section3">
-        <h1>3. Peatükk</h1>
-        <p>Ma loodan, et teile meeldib siin.</p>
-        <button>3. Library</button>
-      </div>
-      <div class="section" id="section4">
-        <h1>4. Peatükk</h1>
-        <p></p>
-      </div>
-      <div class="section" id="section5">
-        <h1>Hobid</h1>
-        <p>Korvpall, DJ-mine, Kitarr</p>
-      </div>
-      <div class="section" id="section6">
-        <h1>6. Peatükk</h1>
-        <p></p>
-      </div>
+<head>
+  <title>Roland Silt</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-7ltmoSZxkh74M7kHr/UZrDzexmTgFupm24bKIL3Nf9XKyAtxG/11C7cYhYRiV7Nxb6d2U6mgf3yqLhXPSymcmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0/aos.css" integrity="sha512-Z+IRxoyhWy9OmMzeNojLGFbC6yybfN7k7F7ZiE+KFbOpVzgtSoT9SZIMMEzS+E/2KvVJfsoK6Y1pY71ZzHhMww==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+  <style>
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video id="my-video" class="video-js vjs-big-play-centered" controls>
+      <source src="laul33.mp4" type="video/mp4" />
+    </video>
   </div>
-  <div class="section" id="section7">
-    <h1>Lebron aka GOATBOSS</h1>
-    <p>Imetle talenti.</p>
-  </div>
-</div>
-    </div>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://www.pixelstalk.net/wp-content/uploads/2017/04/Lebron-James-Cleveland-Pictures1.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="https://wallpapers.com/images/featured/brrspg6e5n5ucryp.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="https://e0.365dm.com/18/09/2048x1152/skysports-lebron-james-la-lakers_4432708.jpg" alt=""></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-      <div class="section" id="section4">
-        <h1>Spotify muss</h1>
-        <p>Nautige</p>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-ZU6OwL6ZI8Kr1UXU3qYc2OfhOzO5o6ACfKVbFO4gl0slmvfZG0AS2SWrl/9MqhYdH0rc0srKpzzPONgCYsEbiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="library2.js"></script>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5uq2XR5y7cx10khqGicsPS?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-
-    <script>
-    var contactButton = document.getElementById("contact-button");
-    var contactPopup = document.getElementById("contact-popup");
-    contactButton.addEventListener("click", function() {
-  contactPopup.style.display = contactPopup.style.display === "none" ? "block" : "none";
-});
-var closePopupButton = document.getElementById("close-popup");
-closePopupButton.addEventListener("click", function() {
-  contactPopup.style.display = "none";
-});
-</script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      AOS.init();
+    });
+  </script>
+  <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+</body>
 </html>
