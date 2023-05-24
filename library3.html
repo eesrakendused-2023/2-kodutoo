@@ -1,0 +1,33 @@
+<html>
+   <head>
+      <title>MomentJS</title>
+      <script type="text/JavaScript" src="https://MomentJS.com/downloads/moment.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+      <style>
+         div {
+            border: solid 1px #ccc;
+            padding: 10px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            width: 50%;
+         }
+      </style>
+   </head>
+   <body>
+      <div style="font-size: 25px" id="todaysdate"></div>
+      <script type="text/JavaScript">
+         var a = moment().toString();
+         document.getElementById("todaysdate").innerHTML = a;
+
+         // Anime.js animation
+         var element = document.getElementById('todaysdate');
+
+         var animation = anime({
+            targets: element,
+            translateY: [-100, 0], 
+            opacity: [0, 1], 
+            duration: 10000, 
+            easing: 'easeOutExpo' 
+         });
+      </script>
+   </body>
+</html>
