@@ -1,0 +1,7 @@
+Ivan Frolov
+
+Libraries:
+1) Jquerry - Bold(all characters)
+2) Animate on scroll - "Fade-up" (first section)
+3) Chart.js - Random chart (last section, after videogame)
+
