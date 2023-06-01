@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, 
+          maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.min.css" 
+    integrity=
+    "sha512-JIWkx/Vz4qw2gIbB6CCH0f8TdElaUt22FCIIytW9C792hpBivsgmsBqoIMtlDTbqLI9mCA+PXw4/v6BCRLbtKw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+        .bold-text {
+          font-weight: bold;
+        }
+      </style>
+</head>
+<body>
+    <script>
+      $(document).ready(function() {
+        $('body').find('*').addClass('bold-text');
+      });
+    </script>
+    <ul id="menu">
+        <li data-menuanchor="firstPage" class="active">MENÜÜ</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Minust</a></li>
+        <li data-menuanchor="thirdPage"><a href="#thirdPage">Lemmikmuusika</a></li>
+        <li data-menuanchor="finalPage"><a href="#finalPage">Mäng javascriptiga</a></li>
+        <li data-menuanchor="SuperFinalPage"><a href="#SuperFinalPage">Random Chart</a></li>
+
+    </ul>
+    <div id="fullpage">
+        <div class="section aos-init" data-aos="fade-up">Tere tulemast!</div>
+        <div class="section">
+            <div class="slide">Minu oskused: <br> 1. Python <br> 2. 3D Max <br> 3. MariaDB</div>
+            <div class="slide">Minu kontaktandmed: <br> e-post: ioann.frolov@gmail.com <br>
+                 tel: 58196367 </div>
+            <div class="slide">Minu projektid: <br> 1. Muusikaveeb(prototüüp) </div>
+            <div class="slide">Minu hobid: <br> 1. Viktoriinid <br> 2. Lugemine <br> 
+                3. Toidu valmistamine </div>
+        </div>
+        <div class="section" id="section3">Minu lemmikmuusika
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/videoseries?list=PLXDY5bhWODipkFWs7Z6DtYbecMYN5_HMT" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>   </div>
+        <div class="section" id="section4">Mäng javascriptiga 
+            <br> Code This Lab (2018) Tic Tac Toe online
+            <iframe src="https://www.crazygames.com/embed/tic-tac-toe" 
+            style="width: 100%; height: 100%;" 
+            frameborder="0" allow="gamepad *;"></iframe>        </div>
+            <div class="section" id="section5">Random Chart
+                <canvas id="myChart"></canvas>  </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.min.js" 
+    integrity=
+    "sha512-zAHJKGyoPf2Y20Wi4uo32sa/vSvwKfY4tYUt6gJfmkA79X0wt5ZfaxL5GqJ5cMnmvGslWi5PKTo51rHRZqYbJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+<script>
+    // Generate a random number between a given range
+    function getRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+  
+    // Get the canvas element
+    var canvas = document.getElementById('myChart');
+  
+    // Create the chart
+    var ctx = canvas.getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+        datasets: [{
+          label: 'Random Chart',
+          data: [
+            getRandomNumber(1, 10),
+            getRandomNumber(1, 10),
+            getRandomNumber(1, 10),
+            getRandomNumber(1, 10),
+            getRandomNumber(1, 10)
+          ],
+          backgroundColor: 'rgba(54, 162, 235, 0.6)'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+  
+</html>
+
+
+//Struktuuri allikas: Rudnyi, M (2023) fullPage source code  [Source code]. https://github.com/MaksymRudnyi/fullPage
+//Arvitimäng : Code This Lab (2018) Tic Tac Toe online, [Arvutimäng]. https://www.crazygames.com/game/tic-tac-toe
+
